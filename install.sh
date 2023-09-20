@@ -41,7 +41,7 @@ echo "$1 $3" >>/root/usuarios.db
 IP=$(wget -qO- ipv4.icanhazip.com)
 echo ""
 echo -e "\033[1;32m===================================="
-echo -e "\033[1;32m   🌺ㅤONLY/:FORYOU&ALLㅤ🌺  " 
+echo -e "\033[1;32m   💞ㅤMr.htun Gcp Severㅤ💞  " 
 echo -e "\033[1;32m===================================="
 echo ""
 echo -e "\033[1;37m◈─────⪧ SSH ACCOUNT ⪦─────◈"
@@ -53,7 +53,7 @@ echo -e "\033[1;32m◈ Password    :⪧  \033[1;31m$2"
 echo -e "\033[1;32m◈ Login Limit :⪧  \033[1;31m$3"
 echo -e "\033[1;32m◈ Expire Date :⪧  \033[1;31m$gui"
 echo ""
-echo -e "\033[1;37m◈────⪧ ✿ ✿ 4▪0▪4 ✿ ✿ ⪦────◈"
+echo -e "\033[1;37m◈────⪧ ❣️ 😘 Mr.htun 😘 ❣️ ⪦────◈"
 echo ""
 
 else
@@ -77,4 +77,4 @@ echo -e "${cyan}          \|__|        \|_______|              \|__|            
 echo -e "${green}Contact the developer https://t.me/nkka404 for more information              ${plain}"
 echo -e "${yellow}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ${plain}"
 
-echo -e "${cyan}i am 404 😎 ${plain}"
+echo -e "${cyan}i am Mr.htun 🥰 ${plain}"
