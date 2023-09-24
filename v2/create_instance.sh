@@ -19,7 +19,7 @@ plain='\033[0m'
 if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $5 ]] && [[ -n $6 ]] && [[ -n $7 ]] && [[ $(($(date +%s) - $7)) -lt 120 ]] && [[ $(($(date +%s) - $7)) -ge 0 ]]; then
 
 echo -e "${yellow}Creating instance ...${plain}"
-instance=$(gcloud dataproc clusters create $1 --region asia-southeast1 --master-machine-type e2-standard-2 --master-boot-disk-size 500 --num-workers 2 --worker-machine-type e2-standard-2 --worker-boot-disk-size 500 --image-version 2.0-debian10 --project qwiklabs-gcp-03-0c0648626a6a)
+instance=$(gcloud dataproc clusters create $1 --region $4 --master-machine-type $2 --master-boot-disk-size 500 --num-workers 2 --worker-machine-type $2 --worker-boot-disk-size 500 --image-version $6 --project $5)
 echo -e "${green}Instance created.${plain}"
 
 #echo -e "${yellow}Creating instance ...${plain}"
