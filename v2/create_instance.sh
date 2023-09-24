@@ -19,7 +19,7 @@ plain='\033[0m'
 if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $5 ]] && [[ -n $6 ]] && [[ -n $7 ]] && [[ $(($(date +%s) - $7)) -lt 120 ]] && [[ $(($(date +%s) - $7)) -ge 0 ]]; then
 
 echo -e "${yellow}Creating instance ...${plain}"
-instance=$(gcloud compute instances create $1 --project=$5 --zone=$4 --machine-type=$2 --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default --maintenance-policy=MIGRATE --provisioning-model=STANDARD --service-account=$6-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server --create-disk=auto-delete=yes,boot=yes,device-name=persistent-disk-0,image=projects/debian-cloud/global/images/debian-10-buster-v20230912,mode=rw,size=10,type=projects/$5/zones/$4/diskTypes/pd-standard --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any)
+instance=$(gcloud dataproc clusters create $1 --region asia-southeast1 --master-machine-type e2-standard-2 --master-boot-disk-size 500 --num-workers 2 --worker-machine-type e2-standard-2 --worker-boot-disk-size 500 --image-version 2.0-debian10 --project qwiklabs-gcp-03-0c0648626a6a)
 echo -e "${green}Instance created.${plain}"
 
 #echo -e "${yellow}Creating instance ...${plain}"
